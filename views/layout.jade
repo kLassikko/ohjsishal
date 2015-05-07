@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js")
+    script(src='/javascripts/angularApp.js')
+  body(ng-app="Hypnotoad" ng-controller="MainCtrl")
+
+    #loggedIn(ng-show="isLoggedIn()") logged in as {{currentUser}}
+      #logOut
+      a(href='' ng-click="logOut()") log out
+    #loginForm(ng-hide="isLoggedIn()")
+      form(ng-submit="logIn()")
+          input(type="text" placeholder="Username" ng-model="user.username")
+          input(type="password" placeholder="Password" ng-model="user.password")
+          button(type="submit") Log in
+
+    block content

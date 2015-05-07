@@ -1,0 +1,89 @@
+body {
+  word-wrap: break-word;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#header{
+	background-color: #AADDAA;
+}
+
+h1{
+	font-size: 42px;
+	color: #FFF;
+	margin-left: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#loginForm{
+	margin-left:50%;
+}
+
+#loginForm input{
+	margin-right: 5px;
+}
+
+#loggedIn{
+	margin-left:70%;
+}
+
+#logOut{
+	float:right;
+}
+
+#postForm{
+	text-align: center;
+}
+
+textArea{
+	width:300px;
+	height: 50px;
+}
+
+span#charactersLeft{
+	font-size: 11px;
+}
+
+button#submitButton{
+	margin-left: 5%;
+}
+
+#post{
+	margin-top: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-radius: 5px;
+	background-color: #CCEECC;
+	padding: 5px;
+}
+
+#post button{
+	float: right;
+	margin-left: 5px;
+}
+
+span#sender{
+	font-weight: bold;
+}
+
+#message{
+	width: 80%;
+}
+
+#timestamp{
+
+}
+
+span#timestampAgo {
+	font-size: 11px;
+	margin-right: 10px;
+}
+
+span#timestamp {
+	font-size: 9px;
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  #header
+    h1= title
+
+  #postForm
+    form
+        textArea(type="text" placeholder="All glory to the Hypnotoad!" 
+          ng-model="message" maxlength="140" enter-submit="addPost()")
+      span#charactersLeft {{140 - message.length}} characters left
+      button#submitButton(ng-click="addPost()") Submit
+
+  #post(ng-repeat="post in posts | orderBy:['-upvotes', '-timestamp']")
+    #message 
+      span {{post.upvotes}} 
+      span#sender {{post.user}}: 
+      span {{post.message}} 
+    button(ng-click="incrementUpvotes(post)") upvote
+    button(ng-click="deletePost(post)") delete
+    #timestamp
+      span#timestampAgo {{date - post.timestamp | date: " m' minutes ago '"}}
+      span#timestamp {{post.timestamp | date: 'HH:mm:ss dd.MM.yyyy'}}
